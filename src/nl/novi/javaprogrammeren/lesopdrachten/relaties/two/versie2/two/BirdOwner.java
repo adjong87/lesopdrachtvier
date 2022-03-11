@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BirdOwner {
+    private static int ringNumber;
     private String name;
     private char sex;
     private static List<Bird> birdList;
@@ -31,7 +32,7 @@ public class BirdOwner {
         return sex;
     }
 
-    public List<Bird> getBirdList() {
+    public static List<Bird> getBirdList() {
         return birdList;
     }
 
@@ -46,15 +47,43 @@ public class BirdOwner {
     }
 
     // ---------- METHODS --------------------
-    public void addBird(String nickname, String species, int ringNumber){
-        Bird bird = new Bird(nickname, species, ringNumber);
-        birdList.add(bird);
+//
+//    public static void addBird(String nickname, String species, int ringNumber) {
+//        if (getBirdList().get().getRingNumber().contains(ringNumber) == true) {
+//
+//            System.out.println(nickname + ringNumber);
+//            System.out.println("Deze is al gebird!");
+//            break;
+//        }
+//            else{
+//            Bird bird = new Bird(nickname, species, ringNumber);
+//            birdList.add(bird);
+//        }
+//    }
+//
+    public static void addBird(String nickname, String species, int ringNumber) {
+        if (BirdOwner.getBirdList().size() > 1) {
+            int i = 0;
+            while (i <= BirdOwner.getBirdList().size() - 1) {
+                int k = BirdOwner.getBirdList().get(i).getRingNumber();
+                    while (k != ringNumber) {
+                    System.out.println("test");
+                    i++;
+                } else {
+                    System.out.println("reeds gebird");
+                    break;
+                }
+            }
+        } else {
+            Bird bird = new Bird(nickname, species, ringNumber);
+            birdList.add(bird);
+        }
     }
 
 
-    public String toString(){
+    public String toString() {
         return getName() + getSex() + getBirdList();
     }
 
-}
 
+}
