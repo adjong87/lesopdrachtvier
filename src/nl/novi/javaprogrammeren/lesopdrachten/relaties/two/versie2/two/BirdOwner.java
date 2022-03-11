@@ -1,7 +1,7 @@
-package nl.novi.javaprogrammeren.lesopdrachten.relaties.two;
+package nl.novi.javaprogrammeren.lesopdrachten.relaties.two.versie2.two;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class BirdOwner {
     private String name;
@@ -14,9 +14,12 @@ public class BirdOwner {
         birdList = new ArrayList<>();
     }
 
-    public void setBirdList(List<Bird> birdList) {
-        BirdOwner.birdList = birdList;
-    }
+//    public void setBirdList(List<Bird> birdList) {
+//        BirdOwner.birdList = birdList;
+//    }
+
+    /// ^^ volgens mij doen we daar niks mee
+
 
     // -------------- GETTERS ------------------
 
@@ -43,9 +46,15 @@ public class BirdOwner {
     }
 
     // ---------- METHODS --------------------
-
-    public static void addBird(Bird bird) {
+    public void addBird(String nickname, String species, int ringNumber){
+        Bird bird = new Bird(nickname, species, ringNumber);
         birdList.add(bird);
     }
 
+
+    public String toString(){
+        return getName() + getSex() + getBirdList();
+    }
+
 }
+

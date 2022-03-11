@@ -8,10 +8,13 @@ public class DogOwnerMain {
     De sex en species variables mogen na instantiatie niet meer aangepast worden.
 
     Geef de klasse DogOwner de volgende instance variables: name, sex.
-    Er zijn geen restricties op getters en setters.
+    Er zijn geen restricties op geters en setters.t
 
-    Programmeer de volgende relatie: Een DogOwner kan maximaal 1 Dog hebben. De DogOwner is in dit geval de eigenaar.
-    De DogOwner-klasse moet methodes bevatten om de naam van de hond aan te passen én de leeftijd met 1 te verhogen.
+     is in dit geval de eigenaar.
+    De DogOwner-klasse moet methodes bevatten om de naam van de hond aan te passen
+    Programmeer de volgende relatie:
+     Een DogOwner kan maximaal 1 Dog hebben.
+      De DogOwner én de leeftijd met 1 te verhogen.
 
     Geef de DogOwner een toString()-methode en druk dit af:
     NAAM-DogOwner heeft een reu/teef, deze is xx jaar oud en van het soort: SOORT-Dog. De hond heet: NAAM-Dog
@@ -21,6 +24,17 @@ public class DogOwnerMain {
 
     public static void main(String[] args) {
 
+        Dog jente = new Dog("jente", "poedel", 28, "teef");
+        System.out.println(jente);
+        DogOwner arjen = new DogOwner("Arjen","Man",jente);
+        System.out.println(arjen);
+        arjen.getDog().setName("Johan");
+        System.out.println(jente.getAge());
+        arjen.changeName("Jente");
+        System.out.println(arjen.getDog().getName());
+        arjen.getDog().increaseAge();
+        System.out.println(arjen.getDog().getAge());
+        System.out.println(arjen);
 
     }
 

@@ -1,4 +1,4 @@
-package nl.novi.javaprogrammeren.lesopdrachten.relaties.two;
+package nl.novi.javaprogrammeren.lesopdrachten.relaties.two.versie2.two;
 
 public class Bird {
     private String nickname;
@@ -34,7 +34,7 @@ public class Bird {
     // ---------- METHODS --------------------
 
     public String toString() {
-        return getNickname() + getSpecies() + getRingNumber();
+        return getNickname() + " " + getSpecies() + " " + getRingNumber();
     }
 
 

@@ -1,6 +1,4 @@
-package nl.novi.javaprogrammeren.lesopdrachten.relaties.two;
-
-import static nl.novi.javaprogrammeren.lesopdrachten.relaties.two.BirdOwner.*;
+package nl.novi.javaprogrammeren.lesopdrachten.relaties.two.versie2.two;
 
 public class MainBird {
 
@@ -26,22 +24,25 @@ public class MainBird {
      */
 
     public static void main(String[] args) {
-        Bird papegaai = new Bird("Lorre", "speciale papegaai", 666);
-        Bird specht = new Bird("Woody", "woodpecker", 420);
-        Bird nachtegaal = new Bird("gaaltje", "nachtegaal", 419);
-        Bird merel = new Bird("Merel", "merel", 418);
-        Bird dodo = new Bird("Dodo", "dodo", 417);
-        Bird mus = new Bird("Elon", "mus", 416);
-        Bird mus1 = new Bird("Elon1", "mus", 415);
-        Bird mus2 = new Bird("Woody2", "mus", 414);
-        Bird mus3 = new Bird("Woody3", "mus", 413);
-        Bird mus4 = new Bird("Woody4", "mus", 412);
-        Bird mus5 = new Bird("Woody5", "mus", 411);
-        Bird mus6 = new Bird("Woody6", "mus", 410);
-        Bird mus7 = new Bird("Woody66", "mus", 409);
         BirdOwner jente = new BirdOwner("Jente", 'f');
-        BirdOwner.addBird(specht);
-        BirdOwner.addBird(papegaai);
+        jente.addBird("specht", "Woodpecker", 666);
+        jente.addBird("Lorre", "speciale papegaai", 666);
+        jente.addBird("Woody", "woodpecker", 420);
+        jente.addBird("gaaltje", "nachtegaal", 419);
+        jente.addBird("Merel", "merel", 418);
+        jente.addBird("Dodo", "dodo", 417);
+        jente.addBird("Elon", "mus", 416);
+        jente.addBird("Elon1", "mus", 415);
+        jente.addBird("Woody2", "mus", 414);
+        jente.addBird("Woody3", "mus", 413);
+        jente.addBird("Woody4", "mus", 412);
+        jente.addBird("Woody5", "mus", 411);
+        jente.addBird("Woody6", "mus", 410);
+        jente.addBird("Woody66", "mus", 409);
+        jente.addBird("Woody66", "mus", 409);
+
+        jente.getBirdList().get(2);
+        System.out.println(jente.getBirdList());
     }
 
 }
