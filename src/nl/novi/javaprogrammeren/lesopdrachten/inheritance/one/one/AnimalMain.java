@@ -1,4 +1,4 @@
-package nl.novi.javaprogrammeren.lesopdrachten.inheritance.one;
+package nl.novi.javaprogrammeren.lesopdrachten.inheritance.one.one;
 
 public class AnimalMain {
     /*
@@ -33,12 +33,5 @@ public class AnimalMain {
     Alles staat hier in het Nederlands beschreven. Schrijf je klassen-, variabele en methodenamen in het Engels.
 
      */
-    public static void main(String[] args) {
-        Owner jente = new Owner("Jente", 28, 'f');
-        Dog rala = new Dog("Rala",'f',"Brokken",(jente), "Caesar", "Serra de Estrela", "Ralita");
-        System.out.println(rala);
-        rala.eat("Caesar");
-        rala.move();
-        rala.sleep();
-    }
+
 }

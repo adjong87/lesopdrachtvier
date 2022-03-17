@@ -8,11 +8,13 @@ public class BirdOwner {
     private String name;
     private char sex;
     private static List<Bird> birdList;
+    private static List<Integer>ringNummers;
 
     public BirdOwner(String name, char sex) {
         this.name = name;
         this.sex = sex;
         birdList = new ArrayList<>();
+        ringNummers = new ArrayList<>();
     }
 
 //    public void setBirdList(List<Bird> birdList) {
@@ -47,43 +49,24 @@ public class BirdOwner {
     }
 
     // ---------- METHODS --------------------
-//
-//    public static void addBird(String nickname, String species, int ringNumber) {
-//        if (getBirdList().get().getRingNumber().contains(ringNumber) == true) {
-//
-//            System.out.println(nickname + ringNumber);
-//            System.out.println("Deze is al gebird!");
-//            break;
-//        }
-//            else{
-//            Bird bird = new Bird(nickname, species, ringNumber);
-//            birdList.add(bird);
-//        }
-//    }
-//
-    public static void addBird(String nickname, String species, int ringNumber) {
-        if (BirdOwner.getBirdList().size() > 1) {
-            int i = 0;
-            while (i <= BirdOwner.getBirdList().size() - 1) {
-                int k = BirdOwner.getBirdList().get(i).getRingNumber();
-                    while (k != ringNumber) {
-                    System.out.println("test");
-                    i++;
-                } else {
-                    System.out.println("reeds gebird");
-                    break;
-                }
-            }
-        } else {
-            Bird bird = new Bird(nickname, species, ringNumber);
-            birdList.add(bird);
-        }
-    }
 
+    public static void addBird(String nickname, String species, int ringNumber) {
+            if (ringNummers.contains(ringNumber)){
+                System.out.println("reeds gebird");
+            }
+            else {
+                Bird bird = new Bird(nickname, species, ringNumber);
+                birdList.add(bird);
+                ringNummers.add((ringNumber));
+            }
+        }
 
     public String toString() {
-        return getName() + getSex() + getBirdList();
+        return "\n\r Eigenaar: " + getName() + BirdOwner.getBirdList();
     }
+
+
+
 
 
 }

@@ -34,8 +34,6 @@ public class Bird {
     // ---------- METHODS --------------------
 
     public String toString() {
-        return getNickname() + " " + getSpecies() + " " + getRingNumber();
+        return "\n\r Nickname: " + getNickname() + "\n\r Ringnummer: " + getRingNumber() + "\n\r";
     }
-
-
 }
