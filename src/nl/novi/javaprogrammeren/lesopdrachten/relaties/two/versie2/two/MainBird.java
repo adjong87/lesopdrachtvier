@@ -41,8 +41,14 @@ public class MainBird {
         jente.addBird("Woody66", "mus", 409);
         jente.addBird("Woody66", "mus", 409);
 
-        jente.getBirdList().get(2);
+
         System.out.println(jente.getBirdList());
+        System.out.println(jente);
+        System.out.println(jente.getBirdList().size());
+
+
+
+
     }
 
 }
